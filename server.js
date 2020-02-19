@@ -8,6 +8,7 @@ const schema = require("./schema");
 const server = express();
 server.use(morgan("combined"));
 server.use(cors()); //allow cross-origin
+server.use(express.json());
 
 server.use(
   "/graphql",
@@ -16,6 +17,10 @@ server.use(
     graphiql: true // endpoint /graphql gives extra tool
   })
 );
+
+server.use("/", (req, res) => {
+  res.send("api up");
+});
 
 const PORT = process.env.PORT || 5001;
 server.listen(PORT, () => {
