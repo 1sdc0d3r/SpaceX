@@ -25,14 +25,3 @@
     "nodemon": "^2.0.2"
   }
 }
-"Not sure where to implement this security"
-  "contentSecurityPolicy": {
-    "default-src": "none",
-    "script-src": "self",
-    "font-src": "self",
-    "connect-src": "self",
-    "img-src": "self",
-    "report-uri": "localhost",
-    "style-src": "self",
-    "frame-src": "none"
-  }
